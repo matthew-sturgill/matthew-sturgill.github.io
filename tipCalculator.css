@@ -1,0 +1,21 @@
+.tipCard{
+    border-style: solid;
+    background-color:mintcream;
+    border-color: darkcyan;
+    border-width: 5px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+#topInfo{
+    font-size: 30px;
+    color: black;
+}
+#bodyOfCard{
+    font-size: 15px;
+    padding: 10px;
+}
+body{
+    background-image: url("doughnut-full.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

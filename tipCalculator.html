@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Tip Calculator
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Official Bootstrap -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-theme.css">
+    <!-- Our project CSS -->
+    <link rel="stylesheet" href="cyborg.css">
+    <link rel="stylesheet" href="tipCalculator.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <center>
+                <div class="col-md-4 none">
+                    <br /></div>
+                <div class="col-md-4 tipCard">
+                    <br />
+                    <p id="topInfo">Tip Calculator</p>
+                    <hr />
+                    <p id="bodyOfCard"> How much was your bill?</p>
+                    <form id="form">
+                        <p>$<input type="number" maxlength="6" min="0.01" step="0.01" max="999" id="billTotal" placeholder=""></p>
+
+                        <p id="bodyOfCard">How was your service?</p>
+                        <div class="dropdown" id="optionDrop">
+                            <select>
+                            <option value = "null">-- Choose an option --</option>
+                            
+                            <option value = "0.30" type = "number" >30% - Outstanding</option>
+                           
+                            <option value = "0.20" type = "number" >20% - Good</option>
+                         
+                            <option value = "0.15" type = "number" >15% - It was okay</option>
+                           
+                            <option value = "0.10" type = "number" >10% - Bad</option>
+                           
+                            <option value = "0.05" type = "number" > 5% - Terrible</option>
+                            </select>
+
+
+                        </div>
+                        <hr />
+                        <p id="bodyOfCard">How many people are splitting this bill?
+                            <p>
+                                <div class="dropdown" id="peopleSplit">
+                                    <select>
+                            <option value = "1" type = "number" >-1 person -</option>
+                            
+                            <option value = "2" type = "number" >-2 people-</option>
+                           
+                            <option value = "3" type = "number" >-3 people-</option>
+                         
+                            <option value = "4" type = "number" >-4 people-</option>
+                           
+                            <option value = "5" type = "number" >-5 people-</option>
+                           
+                            <option value = "6" type = "number" >-6 people-</option>
+                            
+                            <option value = "7" type = "number" >-7 people-</option>
+
+                            <option value = "8" type = "number" >-8 people-</option>
+
+                            <option value = "9" type = "number" >-9 people-</option>
+
+                            <option value = "10" type = "number" >-10 people-</option>
+                            </select><br /> <br />
+
+                                    <button type="submit" class="btn btn-primary" id="collectData">Calculate</button><br
+                                    />
+                                    <center>
+                                        <div id="bodyOfCard" class="results">
+                                            <div>
+                                    </center>
+                                    <button id="clear" type="button" class="btn btn-warning" onClick="history.go(0)" VALUE="Refresh">Clear</button><br
+                                    /><br/>
+
+                    </form>
+                    </div>
+
+                    <div class="col-md-4 none">
+                        <br /></div>
+            </center>
+
+
+            </div>
+            </div>
+
+
+</body>
+
+<footer>
+</footer>
+<!-- Official JQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<!-- Official Bootstrap -->
+<script src="bootstrap.js"></script>
+<!-- Our project JS -->
+<script src="tipCalculator.js"></script>
+
+</html>
