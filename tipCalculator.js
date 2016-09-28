@@ -28,6 +28,7 @@ $(function () {
             .append("Tip per person: $" + tipPer + "<br />")
             .append("Total bill per person: $" + total)
         $(".results").append(div);
+        return false;
     });
 
 
