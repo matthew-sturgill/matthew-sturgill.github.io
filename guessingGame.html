@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Guess the number!
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Official Bootstrap -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-theme.css">
+    <!-- Our project CSS -->
+    <link rel="stylesheet" href="cyborg.css">
+    <link rel="stylesheet" href="guessingGame.css">
+</head>
+
+<body>
+    <div class="wholePage">
+        <div class="container">
+            <div class="row">
+                <center>
+                    <div class="col-md-4 cardS" id="cardOne">
+                        <input id="boxOne" class="inputCardOne" type="number"></input>
+
+                    </div>
+
+                    <div class="col-md-4 cardS" id="cardTwo">
+
+                        <input id="boxTwo" class="inputCardTwo" type="number"></input>
+                        <br/><br />
+
+
+                    </div>
+
+
+                    <div class="col-md-4 cardS" id="cardThree">
+
+
+                        <input id="boxThree" class="inputCardThree" type="number"></input>
+
+
+
+
+
+
+
+                    </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <br />
+
+    <center><button type=" submit" id="submitNumbers" class="btn submitButton">Submit Numbers</button><br />
+        <p class="instructions"> Choose 3 numbers between 0-9</p>
+        <p class="instructions"> Submit after choosing numbers</p>
+        <p class="instructions"> If correct, box will turn green</p>
+        <p class="instructions">If wrong, box will turn red</p>
+        <p class="instructions">If matches in another box, box will turn yellow</p>
+
+
+</body>
+
+<footer>
+</footer>
+<!-- Official JQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<!-- Official Bootstrap -->
+<script src="bootstrap.js"></script>
+<!-- Our project JS -->
+<script src="guessingGame.js"></script>
+
+</html>

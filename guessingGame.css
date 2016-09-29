@@ -1,0 +1,43 @@
+body{
+    background-image: url("guessGameWallpaper.jpg");
+    background-repeat: no-repeat;
+
+}
+.submitButton{
+    color:mediumpurple;;
+    background-color: greenyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.instructions{
+    color: white;
+}
+.inputCardOne{
+    margin-top: 50px;
+    height: 300px;
+    font-size: 250px;
+    width: 180px;
+    color: BLACK;
+}
+.inputCardTwo{
+    margin-top: 50px;
+    height: 300px;
+    font-size: 250px;
+    width: 180px;
+    color: black;
+}
+.inputCardThree{
+    margin-top: 50px;
+    height: 300px;
+    font-size: 250px;
+    width: 180px;
+    color: black;
+}
+.green{
+    background-color: limegreen;
+}
+.yellow{
+    background-color: yellow
+}
+.red{
+    background-color: red;
+}
