@@ -4,7 +4,7 @@
     border-color: darkcyan;
     border-width: 5px;
     border-radius: 10px;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 #topInfo{
     font-size: 30px;
@@ -18,4 +18,13 @@ body{
     background-image: url("doughnut-full.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+#fB{
+    font-size: 12px;
+    background-color: white;
+    padding: 2px;
+}
+.collectData{
+    padding: 1px;
+    
 }

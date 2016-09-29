@@ -1,22 +1,29 @@
 $(function () {
 
 
-    //All fields must be filled out to work. 
-    //must only allow 6 characters and one decimal in input field
-    //provide option to split bill. with only one numeric input with 1 as the default
-    //calculate button that will only work if all fields filled out. if not send alert with fields missing. 
-    // if validation passes show tip amount per person split. 
-    // If more than one person is split between show full split total. ------<
+    //All fields must be filled out to work. -- check
+    //must only allow 6 characters and one decimal in input field -- meh
+    //provide option to split bill. with only one numeric input with 1 as the default --check
+    //calculate button that will only work if all fields filled out. if not send alert with fields missing. --check
+    // if validation passes show tip amount per person split. --check
+    // If more than one person is split between show full split total. ---check
     //
     //share button to share to sharethis.com
-    //publish in a folder on git hub and to git hub site
+    //publish in a folder on git hub and to git hub site --check
     var billAmount = ""
     var multiplier = ""
     var billTotal = ""
     var tip = ""
     var billTotal = ""
 
+
     $("#collectData").click(function (ev) {
+        if ($("#billTotal").val() == 0) {
+     alert("Please fill in your bill total.");
+        } else if ($('#optionDrop').find(":selected").val() == 0){
+        alert("Please choose a service.");
+        return null;
+        } else {
         amount = $("#billTotal").val();
         multiplier = $('#optionDrop').find(":selected").val();
         peopleSplit = $("#peopleSplit").find(":selected").val();
@@ -29,7 +36,11 @@ $(function () {
             .append("Total bill per person: $" + total)
         $(".results").append(div);
         return false;
+        } 
+       
+        
     });
+  
 
 
 });

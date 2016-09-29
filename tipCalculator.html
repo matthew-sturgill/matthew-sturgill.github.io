@@ -15,6 +15,16 @@
 </head>
 
 <body>
+    <!-- facebook code below -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- facebook code above -->
     <div class="container">
         <div class="row">
             <center>
@@ -26,12 +36,12 @@
                     <hr />
                     <p id="bodyOfCard"> How much was your bill?</p>
                     <form id="form">
-                        <p>$<input type="number" maxlength="6" min="0.01" step="0.01" max="999" id="billTotal" placeholder=""></p>
+                        <p>$<input type="text" required="" maxlength="6" min="0.01" step="0.01" max="999" id="billTotal" placeholder=""></p>
 
                         <p id="bodyOfCard">How was your service?</p>
                         <div class="dropdown" id="optionDrop">
                             <select>
-                            <option value = "null">-- Choose an option --</option>
+                            <option value = "0">-- Choose an option --</option>
                             
                             <option value = "0.30" type = "number" >30% - Outstanding</option>
                            
@@ -81,7 +91,8 @@
                                     </center>
                                   
                     </form>
-                     <button id="clear" type="button" class="btn btn-warning" onClick="history.go(0)" value="refresh">Clear</button><br
+                     <button id="clear" type="button" class="btn btn-warning" style= "color: white" onClick="history.go(0)" value="refresh">Clear</button><br/><br />
+                     <div class="btn btn-primary" id = "fB" data-href="https://matthew-sturgill.github.io/tipCalculator.html" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmatthew-sturgill.github.io%2FtipCalculator.html&amp;src=sdkpreparse">Share to Facebook</a></div>
                     </div>
 
                     <div class="col-md-4 none">
