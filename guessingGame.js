@@ -7,56 +7,66 @@ $(function () {
     var guessOne = '';
     var guessTwo = '';
     var guessThree = '';
-
+    var clicks = 0;
+    //Random numbers to variable on load.
     $(function (ev) {
-        randomOne = Math.floor((Math.random() * 9) + 1);
-        randomTwo = Math.floor((Math.random() * 9) + 1);
-        randomThree = Math.floor((Math.random() * 9) + 1);
-        console.log(randomOne);
-        console.log(randomTwo);
-        console.log(randomThree);
+        var arr = []
+        while (arr.length < 3) {
+            var randomnumber = Math.ceil(Math.random() * 9)
+            var found = false;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == randomnumber) { found = true; break }
+            }
+            if (!found) arr[arr.length] = randomnumber;
+        }
+        randomOne = arr[0];
+        randomTwo = arr[1];
+        randomThree = arr[2];
     });
     $("#submitNumbers").click(function (ev) {
+        clicks++
         guessOne = $("#boxOne").val();
         guessTwo = $("#boxTwo").val();
         guessThree = $("#boxThree").val();
         console.log(guessOne);
         console.log(guessTwo);
         console.log(guessThree);
+        //If alert for winning numbers and ten tries.
+        if (guessOne == randomOne && guessTwo == randomTwo && guessThree == randomThree) {
+            alert(" You Win! Click ok to play again.") ? "" : location.reload();
+        } else if (clicks == 10) {
+            alert(" You lose.The numbers were " + randomOne + "," + randomTwo + "," + randomThree + ".Click ok to play again") ? "" : location.reload();
+        }
         // Below is for the colors of box one that works.
         if (guessOne == randomOne) {
-            $("#boxOne").css("background-color","green");
+            $("#boxOne").css("background-color", "green");
         } else if (guessOne == randomTwo) {
-            $("#boxOne").css("background-color","yellow");
+            $("#boxOne").css("background-color", "yellow");
         } else if (guessOne == randomThree) {
-            $("#boxOne").css("background-color","yellow");
-        } else if (guessOne ) {
-            $("#boxOne").css("background-color","red");
+            $("#boxOne").css("background-color", "yellow");
+        } else if (guessOne) {
+            $("#boxOne").css("background-color", "red");
         }
         // Below is for the colors of box two that works.
         if (guessTwo == randomTwo) {
-            $("#boxTwo").css("background-color","green");
+            $("#boxTwo").css("background-color", "green");
         } else if (guessTwo == randomOne) {
-            $("#boxTwo").css("background-color","yellow");
+            $("#boxTwo").css("background-color", "yellow");
         } else if (guessTwo == randomThree) {
-            $("#boxTwo").css("background-color","yellow");
+            $("#boxTwo").css("background-color", "yellow");
         } else {
-            $("#boxTwo").css("background-color","red");
+            $("#boxTwo").css("background-color", "red");
         }
-             // Below is for the colors of box three that works.
+        // Below is for the colors of box three that works.
         if (guessThree == randomThree) {
-            $("#boxThree").css("background-color","green");
+            $("#boxThree").css("background-color", "green");
         } else if (guessThree == randomOne) {
-            $("#boxThree").css("background-color","yellow");
+            $("#boxThree").css("background-color", "yellow");
         } else if (guessThree == randomTwo) {
-            $("#boxThree").css("background-color","yellow");
+            $("#boxThree").css("background-color", "yellow");
         } else {
-            $("#boxThree").css("background-color","red");
+            $("#boxThree").css("background-color", "red");
         }
-        if (guessOne < 9){
-            alert
-        }
-      
     });
 
 });

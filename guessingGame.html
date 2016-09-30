@@ -2,16 +2,7 @@
 <html>
 
 <head>
-    <!-- facebook below -->
-    <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!-- facebook above -->
+
     <title>
         Guess the number!
     </title>
@@ -22,9 +13,21 @@
     <!-- Our project CSS -->
     <link rel="stylesheet" href="cyborg.css">
     <link rel="stylesheet" href="guessingGame.css">
+    <!--Script for counter -->
+
 </head>
 
 <body>
+        <!-- facebook below -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- facebook above -->
     <div class="wholePage">
         <div class="container">
             <div class="row">
@@ -34,7 +37,7 @@
     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
     type = "number"
     maxlength = "1"
- id="boxOne" class="inputCardOne" type="number"></input>
+ id="boxOne" class="inputCardOne"></input>
 
  </input>
 
@@ -43,14 +46,14 @@
                         <input name="1"
     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
     type = "number"
-    maxlength = "1" id="boxTwo" class="inputCardTwo" type="number"></input>
+    maxlength = "1" id="boxTwo" class="inputCardTwo"></input>
                         <br/><br />
                     </div>
                     <div class="col-md-4 cardS" id="cardThree">
                         <input name="1"
     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
     type = "number"
-    maxlength = "1" id="boxThree" class="inputCardThree" type="number"></input>
+    maxlength = "1" id="boxThree" class="inputCardThree"></input>
                     </div>
             </div>
         </div>
@@ -58,10 +61,12 @@
     <br />
 
     <center>
-      <button type=" submit" id="submitNumbers" class="btn submitButton">Submit Numbers</button><br /><br />
+      <button type="button" id="submitNumbers" class="btn submitButton">Submit Numbers</button><br /><br />
+
         <div class = "bottomInfo" >
         <p class="instructions"> Choose 3 numbers between 0-9</p>
         <p class="instructions"> Submit after choosing numbers</p>
+        <p class="instructions"> You get 10 submissions</p>
         <p class="instructions"> If correct, box will turn green</p>
         <p class="instructions">If wrong, box will turn red</p>
         <p class="instructions">If matches in another box, box will turn yellow</p>
