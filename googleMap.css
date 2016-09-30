@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+}
+
+.center{
+    padding-top: 20px;
+}
+#location{
+    width:100%
+}
+#getMap{
+    width: 100%;
+}
+#delete{
+    width: 100%;
+}
