@@ -23,7 +23,7 @@ $(function () {
         console.log(guessOne);
         console.log(guessTwo);
         console.log(guessThree);
-        // Below is for the colors of box one. 
+        // Below is for the colors of box one that works.
         if (guessOne == randomOne) {
             $("#boxOne").css("background-color","green");
         } else if (guessOne == randomTwo) {
@@ -33,7 +33,7 @@ $(function () {
         } else if (guessOne ) {
             $("#boxOne").css("background-color","red");
         }
-        // Below is for the colors of box two.
+        // Below is for the colors of box two that works.
         if (guessTwo == randomTwo) {
             $("#boxTwo").css("background-color","green");
         } else if (guessTwo == randomOne) {
@@ -43,7 +43,7 @@ $(function () {
         } else {
             $("#boxTwo").css("background-color","red");
         }
-             // Below is for the colors of box three.
+             // Below is for the colors of box three that works.
         if (guessThree == randomThree) {
             $("#boxThree").css("background-color","green");
         } else if (guessThree == randomOne) {
@@ -53,9 +53,10 @@ $(function () {
         } else {
             $("#boxThree").css("background-color","red");
         }
-
-        //random numb
-    })
-
+        if (guessOne < 9){
+            alert
+        }
+      
+    });
 
 });

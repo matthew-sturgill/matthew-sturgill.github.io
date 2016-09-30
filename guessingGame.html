@@ -2,6 +2,16 @@
 <html>
 
 <head>
+    <!-- facebook below -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- facebook above -->
     <title>
         Guess the number!
     </title>
@@ -20,51 +30,43 @@
             <div class="row">
                 <center>
                     <div class="col-md-4 cardS" id="cardOne">
-                        <input id="boxOne" class="inputCardOne" type="number"></input>
+                        <input name="1"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number"
+    maxlength = "1"
+ id="boxOne" class="inputCardOne" type="number"></input>
+
+ </input>
 
                     </div>
-
                     <div class="col-md-4 cardS" id="cardTwo">
-
-                        <input id="boxTwo" class="inputCardTwo" type="number"></input>
+                        <input name="1"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number"
+    maxlength = "1" id="boxTwo" class="inputCardTwo" type="number"></input>
                         <br/><br />
-
-
                     </div>
-
-
                     <div class="col-md-4 cardS" id="cardThree">
-
-
-                        <input id="boxThree" class="inputCardThree" type="number"></input>
-
-
-
-
-
-
-
+                        <input name="1"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number"
+    maxlength = "1" id="boxThree" class="inputCardThree" type="number"></input>
                     </div>
-
-
-
             </div>
         </div>
-
-
     </div>
     <br />
 
-    <center><button type=" submit" id="submitNumbers" class="btn submitButton">Submit Numbers</button><br />
+    <center>
+      <button type=" submit" id="submitNumbers" class="btn submitButton">Submit Numbers</button><br /><br />
+        <div class = "bottomInfo" >
         <p class="instructions"> Choose 3 numbers between 0-9</p>
         <p class="instructions"> Submit after choosing numbers</p>
         <p class="instructions"> If correct, box will turn green</p>
         <p class="instructions">If wrong, box will turn red</p>
         <p class="instructions">If matches in another box, box will turn yellow</p>
-
-
+        <div class="fb-share-button" data-href="https://matthew-sturgill.github.io/guessingGame.html" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmatthew-sturgill.github.io%2FguessingGame.html&amp;src=sdkpreparse">Share to Facebook</a></div></center></div>
 </body>
-
 <footer>
 </footer>
 <!-- Official JQuery -->

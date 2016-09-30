@@ -19,9 +19,9 @@ $(function () {
 
     $("#collectData").click(function (ev) {
         if ($("#billTotal").val() == 0) {
-     alert("Please fill in your bill total.");
+     alert("Please fill out all fields.");
         } else if ($('#optionDrop').find(":selected").val() == 0){
-        alert("Please choose a service.");
+        alert("Please fill out all fields.");
         return null;
         } else {
         amount = $("#billTotal").val();
@@ -30,14 +30,22 @@ $(function () {
         totalTip = (amount * multiplier).toFixed(2)
         tipPer = ((amount * multiplier / peopleSplit) * 100 / 100).toFixed(2);
         total = (((parseFloat(amount) + parseFloat(totalTip)) / peopleSplit) * 100 / 100).toFixed(2);
-        var div = $("<div></div>");
+        
+        if (peopleSplit > 1){
+            var div = $("<div></div>");
         div.append("Total tip: $" + totalTip + "<br />")
             .append("Tip per person: $" + tipPer + "<br />")
             .append("Total bill per person: $" + total)
         $(".results").append(div);
         return false;
-        } 
-       
+        } else { 
+            var div = $("<div></div>");
+        div.append("Total tip: $" + totalTip + "<br />")
+            .append("Total bill: $" + total)
+        $(".results").append(div);
+         return false;
+        }
+        }
         
     });
   

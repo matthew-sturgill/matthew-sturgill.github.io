@@ -32,12 +32,9 @@ body{
     width: 180px;
     color: black;
 }
-.green{
-    background-color: limegreen;
-}
-.yellow{
-    background-color: yellow
-}
-.red{
-    background-color: red;
+.bottomInfo{
+    background-color: black;
+    width: 250px;
+    border-radius: 25px;
+    font-size: 12px;
 }
