@@ -19,7 +19,6 @@ $(function () {
                 var myOptions = { zoom: 9, center: new google.maps.LatLng(latI, longI), mapTypeId: google.maps.MapTypeId.ROADMAP }; map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions); marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(latI, longI) }); infowindow = new google.maps.InfoWindow({ content: town }); google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); }); infowindow.open(map, marker);
             } google.maps.event.addDomListener(window, 'load', init_map);
             var div = $("<div></div>");
-            var div = $("<div></div>");
             $(".map").append(init_map);
         });
 
