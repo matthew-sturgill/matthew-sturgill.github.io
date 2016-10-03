@@ -1,4 +1,6 @@
-body{
+.changes{
     background-color: black;
-    
+    background-image: url ("indexbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }

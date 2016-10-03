@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="bootstrap-theme.css">
     <!-- Our project CSS -->
     <link rel="stylesheet" href="cyborg.css">
-    <link rel="stylesheet" href="tipCalculator.css">
+    <link rel="stylesheet" href="tictactoe.css">
 </head>
 
 <body>
@@ -27,78 +27,12 @@
 <!-- facebook code above -->
     <div class="container">
         <div class="row">
-            <center>
+   
                 <div class="col-md-4 none">
-                    <br /></div>
-                <div class="col-md-4 tipCard">
-                    <br />
-                    <p id="topInfo">Tip Calculator</p>
-                    <hr />
-                    <p id="bodyOfCard"> How much was your bill?</p>
-                    <form id="form">
-                        <p>$<input name="0000.00"
-    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-    type = "number"
-    maxlength = "6" required="" min="0.01" step="0.01" id="billTotal" placeholder=""></p>
-
-                        <p id="bodyOfCard">How was your service?</p>
-                        <div class="dropdown" id="optionDrop">
-                            <select>
-                            <option value = "0">-- Choose an option --</option>
-                            
-                            <option value = "0.30" type = "number" >30% - Outstanding</option>
-                           
-                            <option value = "0.20" type = "number" >20% - Good</option>
-                         
-                            <option value = "0.15" type = "number" >15% - It was okay</option>
-                           
-                            <option value = "0.10" type = "number" >10% - Bad</option>
-                           
-                            <option value = "0.05" type = "number" > 5% - Terrible</option>
-                            </select>
-
-
-                        </div>
-                        <hr />
-                        <p id="bodyOfCard">How many people are splitting this bill?
-                            <p>
-                                <div class="dropdown" id="peopleSplit">
-                                    <select>
-                            <option value = "1" type = "number" >-1 person -</option>
-                            
-                            <option value = "2" type = "number" >-2 people-</option>
-                           
-                            <option value = "3" type = "number" >-3 people-</option>
-                         
-                            <option value = "4" type = "number" >-4 people-</option>
-                           
-                            <option value = "5" type = "number" >-5 people-</option>
-                           
-                            <option value = "6" type = "number" >-6 people-</option>
-                            
-                            <option value = "7" type = "number" >-7 people-</option>
-
-                            <option value = "8" type = "number" >-8 people-</option>
-
-                            <option value = "9" type = "number" >-9 people-</option>
-
-                            <option value = "10" type = "number" >-10 people-</option>
-
-                            </select><br /> <br />
-
-                                    <button type="submit" class="btn btn-primary" id="collectData">Calculate</button><br
-                                    />
-                                    <center>
-                                        <div id="bodyOfCard" class="results">
-                                            <div>
-                                    </center>
-                                  
-                    </form>
-                     <button id="clear" type="button" class="btn btn-warning" style= "color: white" onClick="history.go(0)" value="refresh">Clear</button><br/><br />
-                     <div class="btn btn-primary" id = "fB" data-href="https://matthew-sturgill.github.io/tipCalculator.html" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmatthew-sturgill.github.io%2FtipCalculator.html&amp;src=sdkpreparse">Share to Facebook</a></div>
-                    </div>
-
-                    <div class="col-md-4 none">
+                    <input type = "text" id = "topLeft"
+                   <div class="col-md-4 none">
+             <input type = "text" id = "topCenter"
+                    <div class="col-md-4 topRight">
                         <br /></div>
             </center>
 

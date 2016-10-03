@@ -1,8 +1,8 @@
 $(function () {
     var latI = '';
- 
+
     var town = '';
-   
+
     $("#getMap").click(function (ev) {
         var area = $("#location").val();
         $.ajax("https://maps.googleapis.com/maps/api/geocode/json?address=" + area + "&key=AIzaSyAt3yHpgvBYw2u5lrWXKisJ9d23ITL3VUQ", { dataType: "json" }).done(function (data) {
@@ -13,20 +13,20 @@ $(function () {
             console.log(latI);
             console.log(longI);
 
-          $.ajax("https://maps.googleapis.com/maps/api/staticmap?center=" + latI  + "," + longI + "&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:C%7C40." + latI + "," + longI + "& key=AIzaSyBIIX4VrRX1CRxYEmHOVf");
-           var div = $("<div></div>");
-           $("#map").append('<img src="https://maps.googleapis.com/maps/api/staticmap?center=" + latI  + "," + longI + "&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:C%7C40." + latI + "," + longI + "& key=AIzaSyBIIX4VrRX1CRxYEmHOVf - F0QiqiLJPPmE" height="100px" width="90px">');
-     
-     
-       //   $('#map').append('<img src="https://maps.googleapis.com/maps/api/staticmap?center=" + latI  + "," + longI + "&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:C%7C40." + latI + "," + longI + "& key=AIzaSyBIIX4VrRX1CRxYEmHOVf - F0QiqiLJPPmE" height="100px" width="90px">');
-            
-       
-  
+
+
+            function init_map() {
+                var myOptions = { zoom: 9, center: new google.maps.LatLng(latI, longI), mapTypeId: google.maps.MapTypeId.ROADMAP }; map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions); marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(latI, longI) }); infowindow = new google.maps.InfoWindow({ content: town }); google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); }); infowindow.open(map, marker);
+            } google.maps.event.addDomListener(window, 'load', init_map);
+            var div = $("<div></div>");
+            var div = $("<div></div>");
+            $(".map").append(init_map);
         });
+
     });
 });
 
-          
+
 
 
 

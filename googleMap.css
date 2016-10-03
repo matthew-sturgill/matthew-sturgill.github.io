@@ -14,3 +14,8 @@ body {
 #delete{
     width: 100%;
 }
+.map{
+    overflow: hidden;
+    height : 300px;
+    width: 100%;
+}
